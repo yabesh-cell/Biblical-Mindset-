@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blogs - Biblical Mindset</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="css/blogs.css">
+    <script defer src="scripts/blog.js"></script>
 </head>
 <body>
+
     <header>
-        <img src="logo.png" alt="Biblical Mindset Logo" class="logo">
+        <img src="images/logo.png" alt="Biblical Mindset Logo" class="logo">
         <div class="menu-icon" onclick="toggleMenu()">☰</div>
     </header>
 
@@ -25,18 +26,15 @@
     <main>
         <h1>Blog Posts</h1>
 
-        <!-- Blog Entries -->
-        <div class="blog-entry">
-            <img src="jesus.jpg" alt="The Parables of Jesus" class="blog-image">
-            <h2>The Parables of Jesus</h2>
-            <p><strong>Date:</strong> March 2025</p>
-            <a href="first.html" class="blog-link" data-file="first.html">Read More</a>
+        <div class="search-container">
+            <input type="text" id="searchBar" placeholder="Search blogs..." onkeyup="searchBlogs()">
         </div>
 
-        <!-- More blogs can be added in the same format -->
-        
-        <a href="index.html" class="back-home">Back to Home</a>
+        <section id="blog-list">
+            <!-- Blogs will be auto-detected and listed here -->
+        </section>
+
     </main>
 
 </body>
-            </html>
+</html>
