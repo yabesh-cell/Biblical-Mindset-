@@ -1,35 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biblical Mindset</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
-</head>
-<body>
+// Toggle Menu
+function toggleMenu() {
+    const menu = document.getElementById("menu");
+    if (menu.style.display === "block") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "block";
+    }
+}
 
-    <!-- HEADER -->
-    <header>
-        <img src="logo.png" alt="Biblical Mindset Logo" class="logo">
-        <div class="menu-icon" onclick="toggleMenu()">☰</div>
-    </header>
+// Function to Open Blog Page
+function openBlog(filename) {
+    window.location.href = filename;
+}
 
-    <!-- FULL-SCREEN MENU -->
-    <nav id="menu">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="blogs.html">Blogs</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- MAIN CONTENT -->
-    <main>
-        <h1>Welcome to Biblical Mindset</h1>
-        <p>Empowering the new generation with biblical wisdom.</p>
-    </main>
-
-</body>
-  </html>
+// Attach Event Listeners to Blog Links
+document.addEventListener("DOMContentLoaded", function () {
+    const blogLinks = document.querySelectorAll(".blog-link");
+    blogLinks.forEach(link => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault();
+            const blogFile = this.getAttribute("data-file");
+            openBlog(blogFile);
+        });
+    });
+});
