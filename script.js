@@ -3,7 +3,6 @@ function toggleMenu() {
     const menu = document.getElementById("menu");
     menu.style.display = menu.style.display === "block" ? "none" : "block";
 }
-
 // Open Blog Page When Clicked
 document.addEventListener("DOMContentLoaded", function () {
     const blogLinks = document.querySelectorAll(".blog-link");
