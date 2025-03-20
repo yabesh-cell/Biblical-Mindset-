@@ -1,26 +1,40 @@
-// Toggle Menu
-function toggleMenu() {
-    const menu = document.getElementById("menu");
-    if (menu.style.display === "block") {
-        menu.style.display = "none";
-    } else {
-        menu.style.display = "block";
-    }
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblical Mindset</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="scripts/script.js"></script>
+</head>
+<body>
 
-// Function to Open Blog Page
-function openBlog(filename) {
-    window.location.href = filename;
-}
+    <header>
+        <img src="images/logo.png" alt="Biblical Mindset Logo" class="logo">
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    </header>
 
-// Attach Event Listeners to Blog Links
-document.addEventListener("DOMContentLoaded", function () {
-    const blogLinks = document.querySelectorAll(".blog-link");
-    blogLinks.forEach(link => {
-        link.addEventListener("click", function (event) {
-            event.preventDefault();
-            const blogFile = this.getAttribute("data-file");
-            openBlog(blogFile);
-        });
-    });
-});
+    <nav id="menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Welcome to Biblical Mindset</h1>
+        <p>Explore biblical insights for the modern generation.</p>
+
+        <div class="search-container">
+            <input type="text" id="searchBar" placeholder="Search blogs..." onkeyup="searchBlogs()">
+        </div>
+
+        <section id="blog-list">
+            <!-- Blogs will be loaded here automatically -->
+        </section>
+    </main>
+
+</body>
+        </html>
