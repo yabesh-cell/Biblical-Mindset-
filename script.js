@@ -8,7 +8,7 @@ async function fetchBlogPosts() {
     const blogContainer = document.getElementById("blog-posts");
 
     try {
-        const response = await fetch("https://your-jetpack-blog.com/wp-json/wp/v2/posts");
+        const response = await fetch("https://yabeshcellgithubio.wordpress.com/wp-json/wp/v2/posts");
         const posts = await response.json();
 
         blogContainer.innerHTML = ""; // Clear loading text
