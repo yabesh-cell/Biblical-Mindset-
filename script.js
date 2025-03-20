@@ -3,27 +3,30 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function fetchBlogs() {
-    fetch('blog-list.json')
+    fetch("blog-list.json")
         .then(response => response.json())
-        .then(blogs => {
-            const blogList = document.getElementById('blog-list');
-            blogList.innerHTML = "";
-
-            blogs.forEach(blog => {
-                const blogItem = document.createElement('li');
-                blogItem.innerHTML = `<a href="${blog.file}">${blog.title} - ${blog.date}</a>`;
-                blogList.appendChild(blogItem);
+        .then(data => {
+            let blogContainer = document.getElementById("blog-list");
+            blogContainer.innerHTML = "";
+            data.blogs.forEach(blog => {
+                let blogItem = document.createElement("div");
+                blogItem.classList.add("blog-item");
+                blogItem.innerHTML = `
+                    <h2><a href="blog/${blog.file}">${blog.title}</a></h2>
+                    <p>${blog.date}</p>
+                `;
+                blogContainer.appendChild(blogItem);
             });
         });
 }
 
-// Search function
-function searchBlogs() {
+// Blog Search Functionality
+function searchBlog() {
     let input = document.getElementById("search-bar").value.toLowerCase();
-    let blogItems = document.querySelectorAll("#blog-list li");
+    let blogItems = document.querySelectorAll(".blog-item");
 
     blogItems.forEach(item => {
-        let text = item.textContent.toLowerCase();
-        item.style.display = text.includes(input) ? "" : "none";
+        let title = item.querySelector("h2").innerText.toLowerCase();
+        item.style.display = title.includes(input) ? "block" : "none";
     });
 }
