@@ -1,32 +1,31 @@
-document.addEventListener("DOMContentLoaded", function () {
-    fetchBlogs();
-});
-
-function fetchBlogs() {
-    fetch("blog-list.json")
-        .then(response => response.json())
-        .then(data => {
-            let blogContainer = document.getElementById("blog-list");
-            blogContainer.innerHTML = "";
-            data.blogs.forEach(blog => {
-                let blogItem = document.createElement("div");
-                blogItem.classList.add("blog-item");
-                blogItem.innerHTML = `
-                    <h2><a href="blog/${blog.file}">${blog.title}</a></h2>
-                    <p>${blog.date}</p>
-                `;
-                blogContainer.appendChild(blogItem);
-            });
-        });
+// Toggle Menu
+function toggleMenu() {
+    const menu = document.getElementById("menu");
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
 }
 
-// Blog Search Functionality
-function searchBlog() {
-    let input = document.getElementById("search-bar").value.toLowerCase();
-    let blogItems = document.querySelectorAll(".blog-item");
+// Fetch & Display Blogs Automatically
+document.addEventListener("DOMContentLoaded", function () {
+    fetch("blogs.json")
+        .then(response => response.json())
+        .then(data => {
+            const container = document.getElementById("blogs-container");
+            container.innerHTML = "";
+            data.blogs.forEach(blog => {
+                const li = document.createElement("li");
+                li.innerHTML = `<a href="blog/${blog.filename}">${blog.title}</a>`;
+                container.appendChild(li);
+            });
+        });
+});
 
-    blogItems.forEach(item => {
-        let title = item.querySelector("h2").innerText.toLowerCase();
-        item.style.display = title.includes(input) ? "block" : "none";
+// Blog Search Function
+function searchBlogs() {
+    const input = document.getElementById("searchBar").value.toLowerCase();
+    const blogs = document.querySelectorAll("#blogs-container li");
+
+    blogs.forEach(blog => {
+        const text = blog.textContent.toLowerCase();
+        blog.style.display = text.includes(input) ? "block" : "none";
     });
 }
