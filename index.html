@@ -4,30 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblical Mindset</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/script.js"></script>
 </head>
 <body>
 
+    <!-- Navigation Bar -->
     <header>
-        <div class="logo">
-            <img src="images/logo.png" alt="Biblical Mindset">
-        </div>
+        <img src="images/logo.png" alt="Biblical Mindset Logo" class="logo">
         <nav>
-            <button onclick="toggleMenu()">☰</button>
-            <ul id="menu">
+            <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="blog/blogs.html">Blogs</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <!-- Hero Section -->
+    <section class="hero">
         <h1>Welcome to Biblical Mindset</h1>
-        <p>Explore insightful biblical blogs for the new generation.</p>
-        <a href="blog/blogs.html" class="btn">Read Blogs</a>
-    </main>
+        <p>Exploring biblical insights for the modern generation.</p>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blogs">
+        <h2>Latest Blogs</h2>
+        <div class="blog">
+            <a href="https://yabeshcellgithubio.wordpress.com/my-blogs/" target="_blank">
+                <img src="images/parable.png" alt="Parable of Jesus">
+                <h3><b>Parable of Jesus</b></h3>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Biblical Mindset | All Rights Reserved</p>
+    </footer>
 
 </body>
 </html>
