@@ -1,6 +1,0 @@
-{
-    "blogs": [
-        { "title": "First Blog", "filename": "blog1.html" },
-        { "title": "Second Blog", "filename": "blog2.html" }
-    ]
-}
