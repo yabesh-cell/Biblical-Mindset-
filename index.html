@@ -4,37 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblical Mindset</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <script defer src="scripts/script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-
     <header>
-        <img src="images/logo.png" alt="Biblical Mindset Logo" class="logo">
-        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <h1>Biblical Mindset</h1>
+        <nav>
+            <button onclick="toggleMenu()">☰ Menu</button>
+            <ul id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav id="menu">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="blogs.html">Blogs</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-
-    <main>
-        <h1>Welcome to Biblical Mindset</h1>
-        <p>Explore biblical insights for the modern generation.</p>
-
-        <div class="search-container">
-            <input type="text" id="searchBar" placeholder="Search blogs..." onkeyup="searchBlogs()">
-        </div>
-
-        <section id="blog-list">
-            <!-- Blogs will be loaded here automatically -->
-        </section>
-    </main>
-
+    <section id="blog-list">
+        <h2>Latest Blogs</h2>
+        <input type="text" id="searchBar" placeholder="Search Blogs..." onkeyup="searchBlogs()">
+        <ul id="blogs-container"></ul>
+    </section>
 </body>
-        </html>
+</html>
