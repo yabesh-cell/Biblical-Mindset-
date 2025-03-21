@@ -16,9 +16,23 @@ header {
 }
 
 .logo {
-    height: 50px;
+    height: 50px; /* Default height */
+    max-width: 100%; /* Ensures proper scaling */
 }
 
+/* Responsive Logo for Mobile */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .logo {
+        height: 40px; /* Adjusted for mobile */
+        margin-bottom: 10px;
+    }
+}
+
+/* Navigation */
 nav ul {
     list-style: none;
     padding: 0;
@@ -46,9 +60,22 @@ nav ul li a {
     margin: 30px;
 }
 
+.blog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
 .blog img {
-    width: 300px;
-    border-radius: 10px;
+    width: 80px; /* Adjusted size */
+    border-radius: 5px;
 }
 
 .blog h3 {
