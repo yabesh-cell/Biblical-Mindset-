@@ -8,22 +8,26 @@
     <script src="script.js" defer></script>
 </head>
 <body>
+
     <header>
-        <h1>Biblical Mindset</h1>
+        <div class="logo">
+            <img src="images/logo.png" alt="Biblical Mindset">
+        </div>
         <nav>
-            <button onclick="toggleMenu()">☰ Menu</button>
+            <button onclick="toggleMenu()">☰</button>
             <ul id="menu">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="blog/blogs.html">Blogs</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="blog-list">
-        <h2>Latest Blogs</h2>
-        <input type="text" id="searchBar" placeholder="Search Blogs..." onkeyup="searchBlogs()">
-        <ul id="blogs-container"></ul>
-    </section>
+    <main>
+        <h1>Welcome to Biblical Mindset</h1>
+        <p>Explore insightful biblical blogs for the new generation.</p>
+        <a href="blog/blogs.html" class="btn">Read Blogs</a>
+    </main>
+
 </body>
 </html>
