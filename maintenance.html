@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Under Maintenance</title>
     <style>
-        /* Force a clean slate (disable all other styles) */
+        /* Completely reset all styles */
         * {
-            all: unset; 
-            display: revert;
+            all: unset !important;
+            display: revert !important;
         }
+        
+        /* Style for maintenance page */
         body {
             background-color: #121212; /* Dark background */
-            color: white; /* White text */
+            color: white;
             text-align: center;
             font-family: Arial, sans-serif;
             height: 100vh;
@@ -20,26 +22,33 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            margin: 0;
+            padding: 0;
         }
+
         h1 {
             font-size: 2rem;
             margin-bottom: 10px;
         }
+
         p {
             font-size: 1.2rem;
             margin-bottom: 20px;
         }
+
         .credit {
             margin-top: 50px;
             font-size: 1rem;
             opacity: 0.7;
         }
     </style>
+    
     <script>
-        // Stop all other scripts from running
+        // Completely stop all scripts
         window.onload = function() {
             setTimeout(function() {
-                document.head.innerHTML = ''; // Remove all existing scripts/styles
+                // Remove all existing scripts and styles
+                document.head.innerHTML = '<title>Under Maintenance</title>';
                 document.body.innerHTML = `
                     <h1>We Are Under Maintenance</h1>
                     <p>Thank you for your patience.</p>
@@ -47,6 +56,16 @@
                 `;
             }, 10);
         };
+
+        // Stop scripts running before the page loads
+        setTimeout(function() {
+            document.head.innerHTML = '<title>Under Maintenance</title>';
+            document.body.innerHTML = `
+                <h1>We Are Under Maintenance</h1>
+                <p>Thank you for your patience.</p>
+                <div class="credit">Credited to Yabesh Gotame</div>
+            `;
+        }, 50);
     </script>
 </head>
 <body>
@@ -54,4 +73,4 @@
     <p>Thank you for your patience.</p>
     <div class="credit">Credited to Yabesh Gotame</div>
 </body>
-      </html>
+</html>
