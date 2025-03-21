@@ -3,71 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biblical Mindset</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script defer src="js/script.js"></script>
+    <title>Under Maintenance</title>
     <style>
-        .blogs {
-            text-align: center;
-            padding: 20px;
-        }
-        .blog {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            gap: 15px;
-            max-width: 500px;
-            margin: 0 auto;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            background-color: #f9f9f9;
-        }
-        .blog img {
-            width: 80px; /* Adjust size as needed */
-            height: auto;
-            border-radius: 5px;
-        }
-        .blog h3 {
+        /* Import Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        * {
             margin: 0;
-            font-size: 1.2em;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Dark Background with Neon Glow */
+        body {
+            background: #0a0a0a;
+            color: white;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Background Overlay */
+        .background-overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(255,0,150,0.2), rgba(0,255,255,0.2));
+            z-index: 0;
+        }
+
+        /* Centered Content */
+        .container {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        /* Logo Styling */
+        .logo {
+            width: 120px;
+            margin-bottom: 20px;
+            filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.3));
+        }
+
+        /* Colorful Neon Boxes */
+        .box {
+            width: 90%;
+            max-width: 400px;
+            padding: 15px;
+            margin: 10px auto;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* Neon Box Colors */
+        .neon-red {
+            background: rgba(255, 0, 0, 0.2);
+            border: 2px solid red;
+            box-shadow: 0px 0px 15px red;
+            color: white;
+        }
+
+        .neon-blue {
+            background: rgba(0, 150, 255, 0.2);
+            border: 2px solid cyan;
+            box-shadow: 0px 0px 15px cyan;
+        }
+
+        .neon-green {
+            background: rgba(0, 255, 0, 0.2);
+            border: 2px solid lime;
+            box-shadow: 0px 0px 15px lime;
+        }
+
+        /* Social Media Links */
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            transition: 0.3s ease;
+        }
+
+        .facebook {
+            background: #1877f2;
+            border: 2px solid #1256b5;
+            box-shadow: 0px 0px 10px #1877f2;
+        }
+
+        .instagram {
+            background: linear-gradient(45deg, #fccc63, #bc1888, #e1306c);
+            border: 2px solid #e1306c;
+            box-shadow: 0px 0px 10px #e1306c;
+        }
+
+        .social-links a:hover {
+            opacity: 0.8;
+        }
+
+        /* Footer Styling */
+        footer {
+            position: absolute;
+            bottom: 15px;
+            width: 100%;
+            text-align: center;
+            color: #888;
+            font-size: 13px;
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 480px) {
+            .box {
+                font-size: 16px;
+                padding: 10px;
+            }
+            .logo {
+                width: 90px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- Navigation Bar -->
-    <header>
-        <img src="images/logo.png" alt="Biblical Mindset Logo" class="logo">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Animated Background -->
+    <div class="background-overlay"></div>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Welcome to Biblical Mindset</h1>
-        <p>Exploring biblical insights for the modern generation.</p>
-    </section>
-
-    <!-- Blog Section -->
-    <section class="blogs">
-        <h2>Latest Blogs</h2>
-        <div class="blog">
-            <a href="https://yabeshcellgithubio.wordpress.com/my-blogs/" target="_blank">
-                <img src="images/parable.png" alt="Parable of Jesus">
-            </a>
-            <h3><b><a href="https://yabeshcellgithubio.wordpress.com/my-blogs/" target="_blank">Parable of Jesus</a></b></h3>
+    <!-- Maintenance Content -->
+    <div class="container">
+        <img src="logo.png" alt="Biblical Mindset Logo" class="logo">
+        <div class="box neon-red">
+            <h1>We Are Under Maintenance</h1>
         </div>
-    </section>
+        <div class="box neon-blue">
+            <p>We're working hard to bring you an amazing experience. Stay tuned!</p>
+        </div>
+        <div class="box neon-green">
+            <p>Follow us on our social media for updates.</p>
+        </div>
+
+        <!-- Social Media Buttons -->
+        <div class="social-links">
+            <a href="https://www.facebook.com/share/19vTRQNHLj/" target="_blank" class="facebook">Facebook</a>
+            <a href="https://www.instagram.com/mrryabesh?igsh=cXUwMmFwNmZ0eWtt" target="_blank" class="instagram">Instagram</a>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Biblical Mindset | All Rights Reserved</p>
+        <p>All Rights Reserved 2025</p>
+        <p>Created by Team Yabesh</p>
     </footer>
 
 </body>
